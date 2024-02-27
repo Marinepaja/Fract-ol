@@ -6,7 +6,7 @@
 /*   By: mlaporte <mlaporte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 16:44:32 by mlaporte          #+#    #+#             */
-/*   Updated: 2024/02/25 15:24:39 by mlaporte         ###   ########.fr       */
+/*   Updated: 2024/02/27 13:31:20 by mlaporte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,22 +75,6 @@ float	burning_ship(t_complex c)
 		z.b = fabs(2 * z.a * z.b) + c.b;
 		z.a = temp;
 		i++;
-	}
-	return (i);
-}
-
-float	julia(t_complex z, t_complex c)
-{
-	float	i;
-
-	i = 0.0;
-	while (i < 500)
-	{
-		i++;
-		z = add_z(multiply_z(z, z), c);
-		z.mod = sqrt(z.a * z.a + z.b * z.b);
-		if (z.mod >= 2)
-			return (i);
 	}
 	return (i);
 }

@@ -12,9 +12,9 @@ OBJ = $(SRC:.c=.o)
 
 OBJS = $(addprefix $(OBJ_DIR), $(OBJ))
 
-CC = cc
+CC = clang
 
-CFLAGS = -Wall -Wextra #-MMD -MF #-Werror -g3
+CFLAGS = -Wall -Wextra -Werror -g3#-MMD -MF #
 
 RM_FLAGS = -f
 
