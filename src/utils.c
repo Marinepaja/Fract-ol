@@ -56,5 +56,7 @@ float	ft_atof(char *num)
 		while (len--)
 			dec /= 10;
 	}
+	else
+		dec = 0;
 	return (ent + sign * dec);
 }
