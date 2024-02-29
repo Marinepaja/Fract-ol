@@ -33,7 +33,7 @@ MLX = $(MLX_PATH)/libmlx.a
 #####	RULES   #####
 all: $(NAME) fractol.h
 
-$(NAME): $(OBJS) $(MLX) $(LIBFT) fractol.h
+$(NAME): $(OBJS) $(MLX) $(LIBFT)
 	@$(CC) $(CFLAGS) -L$(MLX_PATH) $^ $(MLX_FLAGS) -lm -o $@
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c fractol.h
