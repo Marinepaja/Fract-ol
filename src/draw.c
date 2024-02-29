@@ -6,7 +6,7 @@
 /*   By: mlaporte <mlaporte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 11:42:28 by mlaporte          #+#    #+#             */
-/*   Updated: 2024/02/27 13:31:20 by mlaporte         ###   ########.fr       */
+/*   Updated: 2024/02/29 12:56:43 by mlaporte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,14 +67,15 @@ void	draw_ship(t_window *win)
 float	julia(t_complex z, t_complex c)
 {
 	float	i;
+	float	mod;
 
 	i = 0.0;
-	while (i < 500)
+	while (i < 50)
 	{
 		i++;
 		z = add_z(multiply_z(z, z), c);
-		z.mod = sqrt(z.a * z.a + z.b * z.b);
-		if (z.mod >= 2)
+		mod = sqrt(z.a * z.a + z.b * z.b);
+		if (mod >= 2)
 			return (i);
 	}
 	return (i);

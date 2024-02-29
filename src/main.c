@@ -6,7 +6,7 @@
 /*   By: mlaporte <mlaporte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 14:53:54 by mlaporte          #+#    #+#             */
-/*   Updated: 2024/02/25 15:34:12 by mlaporte         ###   ########.fr       */
+/*   Updated: 2024/02/29 13:32:19 by mlaporte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,8 +83,8 @@ int	main(int argc, char **argv)
 
 	if (argc < 2 || argc > 4)
 	{
-		write(2, "Wrong number of arguments.\n", 27);
-		write(2, "<./fractol> <m/j/s/mandelbrot/julia/ship> (<re> <im>)\n", 54);
+		ft_printf("Wrong number of arguments.\n");
+		ft_printf("<./fractol> <m/j/s/mandelbrot/julia/ship> (<re> <im>)\n");
 		return (1);
 	}
 	win = malloc(sizeof(t_window));
@@ -92,8 +92,8 @@ int	main(int argc, char **argv)
 		return (1);
 	if (parsing(argc, argv, win))
 	{
-		write(2, "Incorrect arguments.\n", 21);
-		write(2, "<./fractol> <m/j/s/mandelbrot/julia/ship> (<re> <im>)\n", 54);
+		ft_printf("Incorrect arguments.\n");
+		ft_printf("<./fractol> <m/j/s/mandelbrot/julia/ship> (<re> <im>)\n");
 		free(win);
 		return (1);
 	}

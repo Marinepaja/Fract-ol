@@ -6,7 +6,7 @@
 /*   By: mlaporte <mlaporte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 16:44:32 by mlaporte          #+#    #+#             */
-/*   Updated: 2024/02/27 13:31:20 by mlaporte         ###   ########.fr       */
+/*   Updated: 2024/02/29 12:57:03 by mlaporte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ float	mandelbrot(t_complex c)
 {
 	t_complex	z;
 	float		i;
+	float		mod;
 
 	i = 0.0;
 	z.a = 0;
@@ -52,8 +53,8 @@ float	mandelbrot(t_complex c)
 	while (i < 50)
 	{
 		z = add_z(multiply_z(z, z), c);
-		z.mod = sqrt(z.a * z.a + z.b * z.b);
-		if (z.mod >= 4)
+		mod = sqrt(z.a * z.a + z.b * z.b);
+		if (mod >= 4)
 			return (i);
 		i++;
 	}

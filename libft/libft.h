@@ -6,7 +6,7 @@
 /*   By: mlaporte <mlaporte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 11:22:20 by mlaporte          #+#    #+#             */
-/*   Updated: 2023/05/17 18:21:57 by mlaporte         ###   ########.fr       */
+/*   Updated: 2024/02/29 13:20:08 by mlaporte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdarg.h>
 
 typedef struct s_list
 {
@@ -66,5 +67,20 @@ size_t		ft_strlcpy(char *dst, const char *src, size_t size);
 t_list		*ft_lstnew(void *content);
 t_list		*ft_lstlast(t_list *lst);
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+int			ft_printf(const char *str, ...);
+int			ft_printc(va_list ap);
+int			ft_printstr(va_list ap);
+int			ft_printptr(va_list ap);
+int			ft_printhexamin(va_list ap);
+int			ft_printhexamaj(va_list ap);
+int			ft_printint(va_list ap);
+int			ft_printuns(va_list ap);
+int			ft_printpercent(va_list ap);
+int			ft_putchar(char c);
+int			ft_putstr(char *str);
+int			ft_putnbr(unsigned int nbr);
+int			ft_putnbr_base(long long unsigned int nbr, char *base);
+size_t		check_format(const char *str);
+size_t		printf_format(const char *str, va_list ap);
 
 #endif

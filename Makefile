@@ -14,7 +14,7 @@ OBJS = $(addprefix $(OBJ_DIR), $(OBJ))
 
 CC = cc
 
-CFLAGS = -Wall -Wextra -Werror -g3#-MMD -MF #
+CFLAGS = -Wall -Wextra -O3 -g3 #-MMD -MF #-Werror
 
 RM_FLAGS = -f
 

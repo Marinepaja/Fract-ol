@@ -31,9 +31,8 @@ ft_strtrim.c \
 ft_substr.c \
 ft_tolower.c \
 ft_striteri.c \
-ft_toupper.c
-
-SRCS_BONUS = ft_lstadd_back.c \
+ft_toupper.c \
+ft_lstadd_back.c \
 ft_lstadd_front.c \
 ft_lstclear.c \
 ft_lstdelone.c \
@@ -42,6 +41,10 @@ ft_lstlast.c \
 ft_lstmap.c \
 ft_lstnew.c \
 ft_lstsize.c \
+ft_printf_types.c \
+ft_printf_types2.c \
+ft_printf.c \
+functions.c
 
 OBJS = ${SRCS:.c=.o}
 

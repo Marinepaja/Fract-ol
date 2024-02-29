@@ -6,7 +6,7 @@
 /*   By: mlaporte <mlaporte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 10:57:26 by mlaporte          #+#    #+#             */
-/*   Updated: 2024/02/25 15:36:05 by mlaporte         ###   ########.fr       */
+/*   Updated: 2024/02/29 12:56:15 by mlaporte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ typedef struct s_complex
 {
 	float	a;
 	float	b;
-	float	mod;
+	// float	mod;
 
 }	t_complex;
 
