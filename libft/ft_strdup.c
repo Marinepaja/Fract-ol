@@ -6,7 +6,7 @@
 /*   By: mlaporte <mlaporte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 14:42:12 by mlaporte          #+#    #+#             */
-/*   Updated: 2023/05/09 12:39:15 by mlaporte         ###   ########.fr       */
+/*   Updated: 2024/03/07 15:23:23 by mlaporte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,4 @@ char	*ft_strdup(const char *s)
 	}
 	dup[i] = 0;
 	return (dup);
-}	
+}
